@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Assignment-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+            height: 100vh;
+            background-image: url('static/background-image.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            color: #0d0c0c;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .form {
+            text-align: center;
+        }
+
+        .label {
+            font-size: 18px;    
+            color: #383535;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: capitalize;
+        }
+
+        .input {
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #a0bedb;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            padding: 12px 24px;
+            background-color: #1760b8;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: #0c434b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Calculate Circle Diameter</h1>
+            <form class="form" method="post" action="/" enctype="multipart/form-data">
+                <label for="image_file" class="label">Upload Image:</label>
+                <input type="file" id="image_file" name="file" class="input" accept="image/*" required>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+            <h1 class="title">Image Integral</h1>
+            <form class="form" method="post" action="/image_integral" enctype="multipart/form-data">
+                <label for="img_file" class="label">Upload Image:</label>
+                <input type="file" id="img_file" name="img_file" class="input" accept="image/*" required>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+            <form class="form" method="post" action="/stitch_images" enctype="multipart/form-data">
+                <label for="multi_image_file" class="label">Upload Multiple Images:</label><br>
+                <input type="file" id="multi_image_file" name="files" class="input" accept="image/*" multiple required><br>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
