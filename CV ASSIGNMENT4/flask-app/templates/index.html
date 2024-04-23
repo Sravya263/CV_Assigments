@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-Assignment-4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #cdeccd; /* Light green background color */ 
+            background-size: cover; /* Ensure the background image covers the entire viewport */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #8e65dc, #f2f22e);
+            background-color: #cdeccd; /* Light green background color */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(108, 84, 84, 0.1);
+            text-align: center;
+            animation: scale-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        @keyframes scale-up {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .title {
+            color: #0d0c0c;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label-text {
+            color: #b46161;
+            font-size: 18px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 40px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(159, 218, 220);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h2 class="title">Object Tracking, Recognition and Dimensions Estimation</h2>
+        <form action="/streaming" method="post" enctype="multipart/form-data" class="form" name="Streaming">
+            <label class="label-text">Start Streaming Dimensions Calculation</label>
+            <br><br>
+            <button type="submit" class="submit-btn">streaming</button>
+        </form>
+    </div>
+</body>
+</html>

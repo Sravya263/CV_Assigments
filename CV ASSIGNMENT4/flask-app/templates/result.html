@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Assignment-4</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #cdeccd;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #8e65dc, #f2f22e);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(108, 84, 84, 0.1);
+            text-align: center;
+            animation: scale-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        .title {
+            color: #0d0c0c; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #video-container-1 {
+            max-width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .start-stream-btn {
+            background-color: #4CAF50; /* Green color for the button */
+            color: white;
+            padding: 14px 40px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-stream-btn:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Object Tracking, Recognition & Dimensions Calculation</h1>
+        <h2 class="title">Streaming</h2>
+        <div id="video-container-1">
+            <img src="{{ url_for('video_stream') }}" class="video" alt="Video Stream">
+        </div>
+        <button class="start-stream-btn">Start Streaming</button>
+    </div>
+</body>
+</html>
